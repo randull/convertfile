@@ -1,0 +1,14 @@
+<?php
+
+/**
+	* @file
+	* convertfile.module
+	*/
+
+function convertfile_block_info() {
+  $blocks['convertfile'] = array(
+    'info' => t('My Custom Block'),
+  );
+
+  return $blocks;
+}
