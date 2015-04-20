@@ -1,4 +1,8 @@
 name = "Convert File"
-description = "Converts Word Documents to PDF"
+description = "Converts Uploaded Documents"
 core = "7.x"
-version "7.x-1.0"
+package = Media
+version = "7.x-1.0"
+
+dependencies[] = "ctools"
+dependencies[] = "file_entity"
