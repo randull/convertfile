@@ -1,14 +1,32 @@
 <?php
 
 /**
-	* @file
-	* convertfile.module
-	*/
+ * @file
+ * convertfile.module
+ */
 
+/**
+ * Implements hook_block_info().
+ */
 function convertfile_block_info() {
   $blocks['convertfile'] = array(
     'info' => t('My Custom Block'),
   );
 
   return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function convertfile_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'convertfile':
+      $block['subject'] = t('This is my Block');
+      $block['content'] = "<strong>test</strong> of stuff";
+      break;
+  }
+  return $block;
 }
